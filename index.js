@@ -15,7 +15,7 @@ const io = new Server(server, {
     origin: [
       "http://localhost:3000",
       "https://astro-live-chat.netlify.app",
-      "https://*.csb.app",
+      "https://*.csb.app/",
     ],
     method: ["GET", "POST"],
   },
