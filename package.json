@@ -1,12 +1,14 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "engines": {
+    "node": "20.x"
+  },
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon functions/index.js",
-    "build": "netlify deploy --prod"
+    "start": "nodemon functions/index.js"
   },
   "author": "",
   "license": "ISC",
