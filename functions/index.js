@@ -2,6 +2,8 @@ const express = require("express");
 const app = express();
 const http = require("http");
 const cors = require("cors");
+const serverless = require("serverless-http");
+const router = express.Router();
 
 const PORT = process.env.PORT || 3001;
 
@@ -39,3 +41,6 @@ app.get("/", (req, res) => {
 server.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
+
+app.use("/.netlify/functions/index", router);
+module.exports.handler = serverless(app);
